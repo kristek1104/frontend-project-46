@@ -1,0 +1,13 @@
+name: 'project test'
+
+on: push
+
+jobs:
+        main:
+                runs-on: ubuntu-latest
+                steps:
+                        - uses: action/checkout@v2
+                        - name: make-lint
+                          run: make lint
+                        - name: make test
+                          run: make test

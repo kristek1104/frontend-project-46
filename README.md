@@ -1,5 +1,9 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/kristek1104/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/kristek1104/frontend-project-46/actions)
 
+<a href="https://codeclimate.com/github/kristek1104/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/ecaf1873cebc683c7b96/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/kristek1104/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/ecaf1873cebc683c7b96/test_coverage" /></a>
+
 ASCIINEMA 1:
 https://asciinema.org/a/Mczp7fqq1lAKfip7kkExYt8Yw
