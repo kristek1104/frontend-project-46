@@ -15,4 +15,4 @@ jobs:
                           run: make lint
                           uses: snyk/actions/node@master
                           env:
-                                  SNYK_TOKEN: ${{ secrets.HEXLET_ID }}
+                                  SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
