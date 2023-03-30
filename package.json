@@ -1,10 +1,11 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/kristek1104/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/kristek1104/frontend-project-46/actions)",
+  "type": "module",
+  "description": "Compares two files and show differences",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/kristek1104/frontend-project-46/issues"
   },
-  "type": "module",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
@@ -23,6 +23,7 @@
   "dependencies": {
     "commander": "^10.0.0",
     "debug": "^4.3.4",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

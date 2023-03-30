@@ -1,10 +1,17 @@
-install: #install
+install:
 	npm ci
-start: #start
-	node bin/gendiff.js
+
+publish:
+	npm publish --dry-run
+
+help:
+	node bin/gendiff.js -h
 
 lint:
 	npx eslint 
 	
 test:
-	node __tests__/diff.test.js
+	npm test
+
+run:
+	gendiff '__fixtures__/file1.json' '__fixtures__/file2.json'
