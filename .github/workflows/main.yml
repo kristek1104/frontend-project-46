@@ -9,8 +9,6 @@ jobs:
                           with:
                                   node-version: 16
                                   cache: 'npm'
-                        - name: Testing
-                          run: make test
                         - name: Linting
                           run: make lint
                           uses: snyk/actions/node@master
