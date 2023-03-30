@@ -1,8 +1,18 @@
-name: link
+name: Hexlet CI
 on: push
 jobs:
         build:
                 runs-on: ubuntu-latest
                 steps:
                         - uses: actions/checkout@v2
-                        - run: make lint
+                        - uses: actions/setup-node@v3
+                          with:
+                                  node-version: 16
+                                  cache: 'npm'
+                        - name: Testing
+                          run: make test
+                        - name: Linting
+                          run: make lint
+                          uses: snyk/actions/node@master
+                          env:
+                                  SNYK_TOKEN: ${{ secrets.HEXLET_ID }}
