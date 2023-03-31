@@ -1,6 +1,11 @@
+import { load } from 'js-yaml';
+
 const parse = (data, format) => {
 	if (format === 'json') {
 		return JSON.parse(data);
+	}
+	if (format === 'yml') {
+		return load(data);
 	}
 	throw new Error(`${format} is not supported`);
 };

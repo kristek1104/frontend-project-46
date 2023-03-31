@@ -9,3 +9,6 @@
 
 ASCIINEMA 1:
 https://asciinema.org/a/Mczp7fqq1lAKfip7kkExYt8Yw
+
+ASCIINEMA 2:
+https://asciinema.org/a/LElqSuviWkiwLRigY3u44JUzl
