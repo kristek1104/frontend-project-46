@@ -1,29 +1,29 @@
+import { test, expect } from '@jest/globals';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import genDiff from '../src/index.js';
+import gendiff from '../src/index.js';
 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const getFixturePath = (filepath) => path.join(__dirname, '..', '__fixtures__', filepath);
-const readFixture = (filepath) => fs.readFileSync(getFixturePath(filepath));
+const readFixture = (filepath) => fs.readFileSync(getFixturePath(filepath), 'utf-8').trim();
 
-const expectedResult1 = '{\n  - follow: false\n    host: hexlet.io\n  - proxy: 123.234.53.22\n  - timeout: 50\n  + timeout: 20\n  + verbose: true\n}';
+const expectedResult1 = readFixture('fileOutput_.txt');
 
-describe('genDiff', () => {
-	test('JSON', () => {
-		const filepath1 = getFixturePath('file1.json');
-		const filepath2 = getFixturePath('file2.json');
+test('JSON', () => {
+	const file1 = getFixturePath('file1.json');
+	const file2 = getFixturePath('file2.json');
 
-		expect(genDiff(filepath1, filepath2)).toEqual(expectedResult1);
-	})
+	expect(gendiff(file1, file2)).toEqual(expectedResult1);
+	expect(gendiff(file1, file2, 'stylish')).toEqual(expectedResult1);
+});
+test('YML', () => {
+	const file1 = getFixturePath('file1.yml');
+	const file2 = getFixturePath('file2.yml');
 
-	test('YML', () => {
-		const filepath1 = getFixturePath('file1.yml');
-		const filepath2 = getFixturePath('file2.yml');
-
-		expect(genDiff(filepath1, filepath2)).toEqual(expectedResult1);
-	})
+	expect(gendiff(file1, file2)).toEqual(expectedResult1);
+	expect(gendiff(file1, file2, 'stylish')).toEqual(expectedResult1);
 });

@@ -9,38 +9,47 @@ const compareData = (file1, file2) => {
 		
 		//add
 		if (!_.has(file1, key)) {
-			 return {
-				         key,
-				         value: file2[key],
-				         type: 'added',
-			};
+			return {
+				key,
+				value: file2[key],
+				type: 'added',
+			}
 		}
 		
 		//delete
 		if (!_.has(file2, key)) {
 			return {
-				        key,
-				        value: file1[key],
-				        type: 'deleted',
-			};
+				key,
+				value: file1[key],
+				type: 'deleted',
+			}
+		}
+
+		//nested
+		if (_.isPlainObject(file1[key]) && _.isPlainObject(file2[key])) {
+			return {
+				key,
+				children: compareData(file1[key], file2[key]),
+				type: 'nested',
+			}
 		}
 
 		//change
 		if (_.has(file1, key) && _.has(file2, key)) {
 			if (file1[key] !== file2[key]) {
 				return {
-					        key,
-					        valueBefore: file1[key],
-					        valueAfter: file2[key],
-					        type: 'changed',
-				};
+					key,
+					valueBefore: file1[key],
+					valueAfter: file2[key],
+					type: 'changed',
+				}
 			}
 			//unchange
 			return {
-				      key,
-				      value: file1[key],
-				      type: 'unchanged'
-			};
+				key,
+				value: file1[key],
+				type: 'unchanged',
+			}
 		}
 	});
 

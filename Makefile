@@ -8,10 +8,18 @@ help:
 	node bin/gendiff.js -h
 
 lint:
-	npx eslint 
+	npx eslint .
+
+fix:
+	npx eslint . --fix
 	
 test:
 	npm test
 
-run:
+diff1:
 	gendiff '__fixtures__/file1.json' '__fixtures__/file2.json'
+
+diff2:
+	gendiff '__fixtures__/file1.yml' '__fixtures__/file2.yml'
+
+.PHONY: test
