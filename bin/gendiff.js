@@ -2,6 +2,7 @@
 
 import { Command } from 'commander/esm.mjs';
 import gendiff from '../src/index.js';
+import process from 'node:process';
 
 const program = new Command();
 

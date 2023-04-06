@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import compareData from './compareData.js';
 import formatStylish from './formatters/stylish.js';
-import parse from './parsers.js'
+import parse from './parsers.js';
+import process from 'node:process';
 
 const getAbsolutPath = (filepath) => path.resolve(process.cwd(), filepath);
 const readFile = (filepath) => fs.readFileSync(getAbsolutPath(filepath), 'utf-8');
