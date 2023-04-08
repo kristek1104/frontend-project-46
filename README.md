@@ -18,3 +18,6 @@ https://asciinema.org/a/6KyZe91hgQgFmwDr1bNuykihV
 
 ASCIINEMA 4:
 https://asciinema.org/a/4mGY53UDWhRJmN0D2NjLVzF95
+
+ASCIINEMA 5:
+https://asciinema.org/a/LPDn6Ry4nOwUWztx3aHgDkjLp
