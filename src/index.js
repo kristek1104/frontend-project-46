@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import compareData from './compareData.js';
-import formatStylish from './formatters/stylish.js';
+import format from './formatters/format.js';
 import parse from './parsers.js';
 import process from 'node:process';
 
@@ -16,7 +16,7 @@ const gendiff = (file1, file2, formatName = 'stylish') => {
 	const parsed2 = parse(data2, getFormat(file2));
 	const data = compareData(parsed1, parsed2);
 
-	return formatStylish(data, formatName);
+	return format(data, formatName);
 };
 
 export default gendiff;

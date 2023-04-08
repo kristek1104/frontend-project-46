@@ -22,4 +22,10 @@ diff1:
 diff2:
 	gendiff '__fixtures__/file1.yml' '__fixtures__/file2.yml'
 
+plain1:
+	gendiff -f 'plain' '__fixtures__/file1.json' '__fixtures__/file2.json'
+
+plain2: 
+	gendiff -f 'plain' '__fixtures__/file1.yml' '__fixtures__/file2.yml'
+
 .PHONY: test

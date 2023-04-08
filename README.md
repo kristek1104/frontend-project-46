@@ -15,3 +15,6 @@ https://asciinema.org/a/LElqSuviWkiwLRigY3u44JUzl
 
 ASCIINEMA 3:
 https://asciinema.org/a/6KyZe91hgQgFmwDr1bNuykihV
+
+ASCIINEMA 4:
+https://asciinema.org/a/4mGY53UDWhRJmN0D2NjLVzF95

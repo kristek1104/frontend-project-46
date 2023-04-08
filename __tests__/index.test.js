@@ -12,6 +12,7 @@ const getFixturePath = (filepath) => path.join(__dirname, '..', '__fixtures__', 
 const readFixture = (filepath) => fs.readFileSync(getFixturePath(filepath), 'utf-8').trim();
 
 const expectedResult1 = readFixture('fileOutput_.txt');
+const expectedResult2 = readFixture('fileOutput_plain.txt');
 
 test('JSON', () => {
 	const file1 = getFixturePath('file1.json');
@@ -19,6 +20,7 @@ test('JSON', () => {
 
 	expect(gendiff(file1, file2)).toEqual(expectedResult1);
 	expect(gendiff(file1, file2, 'stylish')).toEqual(expectedResult1);
+	expect(gendiff(file1, file2, 'plain')).toEqual(expectedResult2);
 });
 test('YML', () => {
 	const file1 = getFixturePath('file1.yml');
@@ -26,4 +28,5 @@ test('YML', () => {
 
 	expect(gendiff(file1, file2)).toEqual(expectedResult1);
 	expect(gendiff(file1, file2, 'stylish')).toEqual(expectedResult1);
+	expect(gendiff(file1, file2, 'plain')).toEqual(expectedResult2);
 });
