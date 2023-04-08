@@ -15,10 +15,3 @@ jobs:
                           uses: snyk/actions/node@master
                           env:
                                   SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-                        - name: Code coverage
-                          uses: paambaati/codeclimate-action@v3.0.0
-                          env:
-                                  CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_SECRET }}
-                          with:
-                                  coverageCommand: make test-coverage
-                                  debug: true
