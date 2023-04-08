@@ -34,4 +34,7 @@ json1:
 json2:
 	gendiff -f 'json' '__fixtures__/file1.yml' '__fixtures__/file2.yml'
 
+test-coverage:
+	npm test -- --coverage --coverageProvider=v8
+
 .PHONY: test
