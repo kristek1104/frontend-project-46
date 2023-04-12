@@ -26,7 +26,7 @@ const iter = (nodes, path) => nodes.flatMap((node) => {
     case 'unchanged':
       return [];
     default:
-      throw new Error('Unknown type: ${node.type}');
+      throw new Error(`Unknown type: ${node.type}`);
   }
 });
 const formatPlain = (tree) => `${iter(tree, []).join('\n')}`;
