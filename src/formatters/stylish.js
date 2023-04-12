@@ -26,7 +26,7 @@ const stringify = (data, depth) => {
   return `{\n${lines.join('\n')}\n${getFourOrEightSpaces(depth)}}`;
 };
 
-const iter = (nodes, depth = 1) => nodes.map((node) => {
+const iter = (nodes, depth) => nodes.map((node) => {
   if (node.type === 'deleted') {
     return `${getTwoOrSixSpaces(depth)}- ${node.key}: ${stringify(
       node.value,
