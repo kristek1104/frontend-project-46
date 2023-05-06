@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/kristek1104/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^10.0.0",
+    "commander": "^10.0.1",
     "debug": "^4.3.4",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
